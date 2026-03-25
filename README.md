@@ -4,9 +4,8 @@
 Este repositorio contiene un **sitio web estático** desarrollado para la práctica del RA3: *Publicación de sitios estáticos y documentación online*.  
 
 El objetivo ha sido:
-1. Aprender a crear un **repositorio en GitHub**.  
-2. Desarrollar un sitio web básico utilizando **HTML y CSS**.  
-3. Publicar el sitio automáticamente mediante **GitHub Pages**.
+1. Desarrollar un sitio web básico utilizando **HTML y CSS**.  
+2. Publicar el sitio automáticamente mediante **GitHub Pages**.
 
 ## Qué se ha hecho
 - Creación de un archivo **`index.html`** como página principal.  

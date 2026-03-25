@@ -1,7 +1,7 @@
 # sitio-web-estatico
 
 ## Presentación del proyecto
-Este repositorio contiene un **sitio web estático** desarrollado para la práctica del RA3: *Publicación de sitios estáticos y documentación online*.  
+Este repositorio contiene un **sitio web estático** desarrollado para la práctica del RA3: Publicación de sitios estáticos y documentación online.  
 
 El objetivo ha sido:
 1. Desarrollar un sitio web básico utilizando **HTML y CSS**.  
@@ -17,6 +17,5 @@ El objetivo ha sido:
   - Bloques destacados y tarjetas para organizar la información.  
 - Despliegue del sitio mediante **GitHub Pages**.
 
-## Sitio publicado
-Puedes acceder al sitio web aquí:  
-[https://soniak05.github.io/sitio-web-estatico/](url)
+## Sitio publicado  
+[Visita el sitio web](https://soniak05.github.io/sitio-web-estatico/)

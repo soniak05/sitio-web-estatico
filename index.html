@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Pages — Documentación</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  background: radial-gradient(circle at top, #221528 0%, #18121a 60%);
+  color: #e8dfea;
+  padding: 48px 24px;
+}
+
+.wrapper { max-width: 680px; margin: 0 auto; }
+
+header {
+  margin-bottom: 48px;
+  padding-bottom: 28px;
+  border-bottom: 2px solid #2e2030;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(208, 128, 160, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: #b88aa3; 
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #ffffff; 
+  line-height: 1.1;
+}
+
+header h1 em {
+  font-style: italic;
+  color: #d080a0;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: #cbb6c5; 
+}
+
+nav {
+  margin-bottom: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: #cbb6c5; 
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 1px solid #2e2030;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+nav a:hover {
+  background: #2e2030;
+  color: #ffffff;
+  border-color: #4a3050;
+}
+
+section { margin-bottom: 44px; }
+
+h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff; 
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2e2030;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+h2 .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: #ffffff;
+  background: #a66881;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: #e0cfda; 
+  margin-bottom: 12px;
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82em;
+  color: #ff9ac0;
+  background: #221528;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d080a0, transparent);
+  margin: 40px 0;
+}
+
+.bloque {
+  border: 1px solid #2e2030;
+  padding: 14px 18px;
+  margin: 10px 0;
+  background: #201425;
+}
+
+.bloque h3 {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.bloque p {
+  font-size: 0.86rem;
+  color: #d6c2ce;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.nota {
+  background: #1c1020;
+  border: 1px solid #3a2040;
+  padding: 12px 16px;
+  margin: 14px 0;
+  font-size: 0.85rem;
+  color: #d6c2ce;
+  line-height: 1.75;
+}
+
+.nota strong { color: #ff9ac0; }
+
+ol { margin-left: 18px; margin-top: 4px; }
+
+li {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #e0cfda;
+  margin-bottom: 8px;
+}
+
+li strong { color: #ffffff; font-weight: 500; }
+
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.85rem; }
+
+th {
+  background: #201425;
+  color: #e0cfda;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 9px 14px;
+  font-weight: 400;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #2e2030;
+  color: #d6c2ce;
+  vertical-align: top;
+}
+
+td:first-child { color: #ffffff; }
+tr:hover td { background: #201425; }
+
+.tipo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+
+.tipo-card {
+  border: 1px solid #2e2030;
+  padding: 16px 18px;
+  background: #201425;
+}
+
+.tipo-card h3 {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.tipo-card p { font-size: 0.84rem; color: #d6c2ce; margin: 0; line-height: 1.65; }
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 2px solid #2e2030;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: #a88a9a;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 520px) {
+  .tipo-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <p class="eyebrow">Publicación de sitios estáticos</p>
+    <h1>GitHub <em>Pages</em></h1>
+    <p>Cómo publicar una página web desde un repositorio de GitHub</p>
+  </header>
+
+  <nav>
+    <a href="#quees">qué es</a>
+    <a href="#tipos">tipos</a>
+    <a href="#crear">paso 1</a>
+    <a href="#publicar">paso 2</a>
+    <a href="#ver">paso 3</a>
+    <a href="#limites">límites</a>
+    <a href="#https">https</a>
+    <a href="#errores">errores</a>
+  </nav>
+
+  <main>
+
+    <section id="quees">
+      <h2><span class="num">1</span> ¿Qué es GitHub Pages?</h2>
+      <p>GitHub Pages es un servicio de GitHub que permite publicar una página web directamente desde un repositorio. Coge los archivos HTML, CSS y JavaScript que tienes ahí subidos y los publica con una URL pública de forma automática.</p>
+      <p>No hace falta contratar ningún servidor ni tocar configuraciones. Solo hay que subir el archivo y GitHub se encarga del resto. Eso sí, solo funciona con contenido estático, no admite lenguajes de servidor (por ejemplo: Python).</p>
+      <p>Sirve para publicar una página personal, la web de un proyecto, documentación técnica, un blog...</p>
+    </section>
+
+    <section id="tipos">
+      <h2><span class="num">2</span> Tipos de sitios</h2>
+      <p>Hay dos tipos de sitios que puedes crear con GitHub Pages:</p>
+      <div class="tipo-grid">
+        <div class="tipo-card">
+          <h3>Sitio de usuario u organización</h3>
+          <p>El repositorio tiene que llamarse <code>&lt;usuario&gt;.github.io</code>. Solo puedes tener uno por cuenta. La URL será <code>https://usuario.github.io</code>.</p>
+        </div>
+        <div class="tipo-card">
+          <h3>Sitio de proyecto</h3>
+          <p>El repositorio puede tener cualquier nombre y puedes crear uno por proyecto. La URL sería <code>https://usuario.github.io/nombre-repositorio</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="crear">
+      <h2><span class="num">3</span> Paso 1 — Crear el repositorio</h2>
+      <ol>
+        <li>Pulsar el botón <strong>"+"</strong> y elegir <strong>"New repository"</strong></li>
+        <li>Elegir el propietario con el menú desplegable</li>
+        <li>Ponerle un nombre al repositorio</li>
+        <li>Seleccionar que sea <strong>público</strong></li>
+        <li>Activar la opción de añadir un <strong>README</strong></li>
+        <li>Hacer clic en <strong>"Create repository"</strong></li>
+      </ol>
+    </section>
+
+    <section id="publicar">
+      <h2><span class="num">4</span> Paso 2 — Subir el HTML y activar Pages</h2>
+      <p>GitHub Pages busca de forma automática un archivo llamado <code>index.html</code>(El archivo principal tiene que tener este nombre)</p>
+      <ol>
+        <li>Dentro del repositorio, pulsar <strong>"Add file"</strong> y elegir <strong>"Upload files"</strong></li>
+        <li>Subir el archivo <code>index.html</code></li>
+        <li>Hacer clic en <strong>"Commit changes"</strong> para guardar</li>
+        <li>Ir a <strong>Settings > Pages</strong></li>
+        <li>En el apartado Branch, seleccionar la rama <code>main</code> y pulsar <strong>Save</strong></li>
+      </ol>
+    </section>
+
+    <section id="ver">
+      <h2><span class="num">5</span> Paso 3 — Ver el sitio publicado</h2>
+      <p>Para ver la URL hay que volver a <strong>Settings > Pages</strong>. </p>
+      <p>Ahí aparecerá un mensaje que dice <strong>"Your site is ready to be published at <code>https://tuusuario.github.io/nombre-repositorio</code>"</strong>.</p>
+      <p>Si haces clic en la URL, se abrirá tu sitio publicado. Si no se ve, espera unos minutos y vuelve a intentarlo. A veces tarda un poco en actualizarse.</p>
+    </section>
+
+    <hr>
+
+    <section id="limites">
+      <h2><span class="num">6</span> Límites de uso</h2>
+      <p>GitHub Pages es gratuito pero tiene sus límites. No está pensado para montar una tienda online, es para sitios personales, documentación o proyectos pequeños.</p>
+      <table>
+        <thead>
+          <tr><th>Qué</th><th>Límite</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tamaño del repositorio</td><td>1 GB recomendado como máximo</td></tr>
+          <tr><td>Peso del sitio publicado</td><td>No puede superar 1 GB</td></tr>
+          <tr><td>Ancho de banda mensual</td><td>100 GB (flexible)</td></tr>
+          <tr><td>Compilaciones por hora</td><td>10 (flexible)</td></tr>
+          <tr><td>Tiempo máximo de despliegue</td><td>10 minutos</td></tr>
+        </tbody>
+      </table>
+      <div class="nota">
+        <strong>Como dato:</strong> si el repositorio pesa más de 1 GB GitHub Pages puede seguir funcionando, pero avisan de que no está pensado para eso y pueden cortar el servicio.
+      </div>
+    </section>
+
+    <section id="https">
+      <h2><span class="num">7</span> HTTPS y seguridad</h2>
+      <p>GitHub Pages ya usa HTTPS en los sitios con dominio <code>github.io</code>. Debido a que la conexión va cifrada, el navegador no muestra el aviso de "sitio no seguro".</p>
+      <p>Si se tiene un dominio personalizado, se puede forzar HTTPS desde Settings > Pages con la casilla <strong>"Enforce HTTPS"</strong>.</p>
+      <div class="nota">
+        Es importante decir que GitHub Pages no es para manejar contraseñas ni datos de pago. Aunque tenga HTTPS, sigue siendo un sitio estático público.
+      </div>
+    </section>
+
+    <section id="errores">
+      <h2><span class="num">8</span> Errores típicos</h2>
+      <p>Hay algunos fallos que se repiten bastante cuando se empieza con GitHub Pages:</p>
+
+      <div class="bloque">
+        <h3>El sitio da error 404</h3>
+        <p>La mayoria de veces es porque el archivo no se llama exactamente <code>index.html</code>. Con mayúscula o cualquier variación no funciona.</p>
+      </div>
+      <div class="bloque">
+        <h3>Los cambios no se ven</h3>
+        <p>Sobretodo porque puede tardar un rato en actualizarse y Si sigue igual, vacía la caché con <code>Ctrl + Shift + R</code>.</p>
+      </div>
+      <div class="bloque">
+        <h3>El sitio no se publica solo</h3>
+        <p>Quien hizo el commit tiene que tener permisos de administrador y el correo verificado en GitHub.</p>
+      </div>
+      <div class="bloque">
+        <h3>El repositorio es privado y no funciona</h3>
+        <p>GitHub Pages solo funciona en repositorios públicos con cuenta gratuita. Si está en privado hay que pasarlo a público o tener una cuenta de pago.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Publicación de sitios estáticos</span>
+    <span>GitHub Pages</span>
+  </footer>
+
+</div>
+</body>
+</html>

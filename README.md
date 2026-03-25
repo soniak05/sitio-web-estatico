@@ -18,4 +18,4 @@ El objetivo ha sido:
 - Despliegue del sitio mediante **GitHub Pages**.
 
 ## Sitio publicado  
-[Visita el sitio web](https://soniak05.github.io/sitio-web-estatico/)
+Puedes acceder al sitio aquí: https://soniak05.github.io/sitio-web-estatico/
